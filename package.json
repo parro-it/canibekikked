@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "engines": {
-    "node": ">=5"
+    "node": ">=4"
   },
   "eslintConfig": {
     "extends": [
@@ -27,5 +27,16 @@
   },
   "files": [
     "index.js"
-  ]
+  ],
+  "dependencies": {
+    "co": "^4.6.0",
+    "is-trademarked": "^1.2.1",
+    "log-symbols": "^1.0.2",
+    "meow": "^3.7.0",
+    "npm-list-author-packages": "^2.0.1",
+    "npm-whoami": "^1.1.4",
+    "ora": "^0.2.0",
+    "pify": "^2.3.0",
+    "update-notifier": "^0.6.3"
+  }
 }
