@@ -12,7 +12,7 @@
     "canibekiked": "cli.js"
   },
   "main": "cli.js",
-  "keywords": [],
+  "keywords": ["trademark", "trademarks", "check", "registered"],
   "engines": {
     "node": ">=4"
   },
