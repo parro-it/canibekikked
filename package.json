@@ -1,6 +1,6 @@
 {
   "name": "canibekiked",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tool to check if any of your NPM repository name is trademarked",
   "repository": "parro-it/canibekiked",
   "license": "MIT",
@@ -13,7 +13,10 @@
     "node": ">=5"
   },
   "eslintConfig": {
-    "extends": ["js", "features"]
+    "extends": [
+      "js",
+      "features"
+    ]
   },
   "devDependencies": {
     "eslint": "^1.10.3",
