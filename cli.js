@@ -12,7 +12,14 @@ function fail(err) {
 
 function trademarkedLog(p) {
   return `${logSymbols.error} Package ${p.name} ` +
-    `has a trademarked name. ${JSON.stringify(p.trademarks)}\n`;
+    `has a trademarked name:
+    ${p.trademarks.map(t => `
+      wordmark:${t.wordmark}
+      reg:${t.reg}
+      description:${t.description}
+      sn:${t.sn}
+      serviceCode:${t.serviceCode}
+    `)}\n`;
 }
 
 canibekiked()
