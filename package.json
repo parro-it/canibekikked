@@ -1,6 +1,6 @@
 {
   "name": "canibekiked",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Tool to check if any of your NPM repository name is trademarked",
   "repository": "parro-it/canibekiked",
   "license": "MIT",
