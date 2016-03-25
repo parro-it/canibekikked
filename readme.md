@@ -1,6 +1,6 @@
 # canibekiked
 
-Tool to check if any of your NPM repository name is trademarked
+Tool to check if any of your NPM repository name is trademarked.
 
 [![Travis Build Status](https://img.shields.io/travis/parro-it/canibekiked.svg)](http://travis-ci.org/parro-it/canibekiked)
 [![NPM module](https://img.shields.io/npm/v/canibekiked.svg)](https://npmjs.org/package/canibekiked)
@@ -9,14 +9,23 @@ Tool to check if any of your NPM repository name is trademarked
 # Installation
 
 ```bash
-npm install --save canibekiked
+npm install -g canibekiked
 ```
 
 ## Usage
 
-```js
-  const canibekiked = require('canibekiked');
+Check all repositories of user you are currently logged in on NPM:
+
+```bash
+$ canibekiked
 ```
+
+Check all repositories of a particulr user:
+
+```bash
+$ canibekiked parroit
+```
+
 
 # License
 

@@ -31,7 +31,8 @@ module.exports = co.wrap(function * canibekiked(user) {
   results.passed = 0;
   const checksCompleted = packages.map(checkOnePackage(results));
 
-  Promise.all(checksCompleted).then(() => results.emit('end', results.passed, results.failed));
+  Promise.all(checksCompleted)
+    .then(() => results.emit('end', results.passed, results.failed));
 
   return results;
 });

@@ -1,6 +1,7 @@
+#!/usr/bin/env node
 'use strict';
 const ora = require('ora');
-const canibekiked = require('.');
+const canibekiked = require('./index');
 const spinner = ora('Retrieving packages');
 const logSymbols = require('log-symbols');
 
