@@ -37,7 +37,7 @@ This project is inspired by this [issue on is-trademarked repo](https://github.c
 
 Canibekiked API module depends on this project.
 
-* [canibekiked-api](parro-it/canibekiked-api) - API used by this cli module.
+* [canibekiked-api](https://github.com/parro-it/canibekiked-api) - API used by this cli module.
 
 
 # License
