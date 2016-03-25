@@ -16,7 +16,7 @@ Tool to check if any of your NPM repository name is trademarked.
 npm install -g canibekiked
 ```
 
-## Usage
+# Usage
 
 Check all repositories of user you are currently logged in on NPM:
 
@@ -29,6 +29,15 @@ Check all repositories of a particulr user:
 ```bash
 $ canibekiked parroit
 ```
+
+# Related projects
+
+* [is-trademarked](https://github.com/egoist/is-trademarked) - Check if a word is trademarked.
+This project is inspired by this [issue on is-trademarked repo](https://github.com/egoist/is-trademarked/issues/3).
+
+Canibekiked API module depends on this project.
+
+* [canibekiked-api](parro-it/canibekiked-api) - API used by this cli module.
 
 
 # License
