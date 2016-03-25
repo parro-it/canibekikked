@@ -6,8 +6,9 @@
   "license": "MIT",
   "author": "parro-it",
   "scripts": {
-    "test": "eslint . && node test | faucet"
+    "test": "eslint ."
   },
+  "main": "cli.js",
   "keywords": [],
   "engines": {
     "node": ">=4"
@@ -21,12 +22,11 @@
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-features": "^1.1.5",
-    "eslint-config-js": "^4.0.0",
-    "faucet": "0.0.1",
-    "tape": "^4.2.2"
+    "eslint-config-js": "^4.0.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "dependencies": {
     "co": "^4.6.0",
