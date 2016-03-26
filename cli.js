@@ -70,13 +70,30 @@ const resultsLog = (spinner, results) =>{
   return results.start();
 };
 
+
 const spinner = ora('Retrieving packages');
 
-updateNotifier({pkg: cli.pkg}).notify();
+const run = () => {
+  spinner.start();
 
-spinner.start();
+  const token = cli.flags.token;
+  const options = token ? { token } : undefined;
+  const results = canibekikked(cli.input[0], options);
+  resultsLog(spinner, results).catch(fail);
+};
 
-const token = cli.flags.token;
-const options = token ? { token } : undefined;
-const results = canibekikked(cli.input[0], options);
-resultsLog(spinner, results).catch(fail);
+updateNotifier({
+  pkg: cli.pkg,
+  callback: function(err, update) {
+    if (err) {
+      return fail(err);
+    }
+    if (update.latest !== update.current) {
+      this.update = update;
+      this.notify();
+    }
+
+    run();
+
+  }
+});
