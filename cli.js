@@ -76,5 +76,7 @@ updateNotifier({pkg: cli.pkg}).notify();
 
 spinner.start();
 
-const results = canibekikked(cli.input[0]);
+const token = cli.flags.token;
+const options = token ? { token } : undefined;
+const results = canibekikked(cli.input[0], options);
 resultsLog(spinner, results).catch(fail);

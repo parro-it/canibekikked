@@ -36,7 +36,7 @@
     "cli.js"
   ],
   "dependencies": {
-    "canibekikked-api": "^1.0.0",
+    "canibekikked-api": "^1.1.0",
     "chalk": "^1.1.1",
     "log-symbols": "^1.0.2",
     "meow": "^3.7.0",
