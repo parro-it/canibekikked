@@ -21,6 +21,8 @@ Tool to check if any of your NPM repository name is trademarked.
 
 # Installation
 
+You need Node 4.0.0 or greater in order to use `canibekikked`.
+
 ```bash
 npm install -g canibekikked
 ```
