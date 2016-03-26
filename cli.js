@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const ora = require('ora');
-const canibekiked = require('canibekiked-api').default;
+const canibekikked = require('canibekikked-api').default;
 const logSymbols = require('log-symbols');
 const meow = require('meow');
 const chalk = require('chalk');
@@ -9,7 +9,7 @@ const updateNotifier = require('update-notifier');
 
 const cli = meow(`
   Usage:
-    canibekiked [user]
+    canibekikked [user]
 
   * user - NPM username, defaults to currently logged.
   * options:
@@ -43,21 +43,21 @@ function trademarkedLog(p) {
     ).join('');
 }
 
-const resultsLog = spinner => results =>{
-  results.on('package-checking', name => {
+const resultsLog = (spinner, results) =>{
+  results.on('package-checking', pkg => {
     spinner.color = 'yellow';
-    spinner.text = `Checking ${name}`;
+    spinner.text = `Checking ${pkg.name}`;
   });
 
   results.on('error', fail);
 
-  results.on('package-checked', res => {
-    if (res.trademarks) {
+  results.on('package-checked', pkg => {
+    if (pkg.trademarks) {
       spinner.color = 'red';
-      spinner.text = `Package ${res.name} has a trademarked name!`;
+      spinner.text = `Package ${pkg.name} has a trademarked name!`;
     } else {
       spinner.color = 'green';
-      spinner.text = `Package ${res.name} is not trademarked.`;
+      spinner.text = `Package ${pkg.name} is not trademarked.`;
     }
   });
 
@@ -66,6 +66,8 @@ const resultsLog = spinner => results =>{
     process.stdout.write(`${logSymbols.success} ${passed} package names have not been trademarked.\n`);
     process.stdout.write(failed.map(trademarkedLog).join(''));
   });
+
+  return results.start();
 };
 
 const spinner = ora('Retrieving packages');
@@ -74,6 +76,5 @@ updateNotifier({pkg: cli.pkg}).notify();
 
 spinner.start();
 
-canibekiked(cli.input[0])
-  .then(resultsLog(spinner))
-  .catch(fail);
+const results = canibekikked(cli.input[0]);
+resultsLog(spinner, results).catch(fail);
