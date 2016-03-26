@@ -12,7 +12,7 @@ Tool to check if any of your NPM repository name is trademarked.
 > I renamed the project, my apologies to anyone who could be offended by this.
 
 
-![image](https://cloud.githubusercontent.com/assets/11197111/14053193/e3fc4148-f2cf-11e5-982c-52bbe49f86fd.png)
+![image](https://cloud.githubusercontent.com/assets/11197111/14062535/d72486c8-f3a2-11e5-84d7-9c590cfacfeb.png)
 
 
 [![Travis Build Status](https://img.shields.io/travis/parro-it/canibekikked.svg)](http://travis-ci.org/parro-it/canibekikked)
