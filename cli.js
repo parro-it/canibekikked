@@ -65,7 +65,7 @@ const resultsLog = spinner => results =>{
 
   results.on('end', (passed, failed) => {
     spinner.stop();
-    process.stdout.write(`${logSymbols.success} ${passed} packages has not trademarked names.\n`);
+    process.stdout.write(`${logSymbols.success} ${passed} package names have not been trademarked.\n`);
     process.stdout.write(failed.map(trademarkedLog).join(''));
   });
 };
