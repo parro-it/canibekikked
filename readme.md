@@ -3,7 +3,7 @@
 Tool to check if any of your NPM repository name is trademarked.
 
 
-> This tool was originally named "canibekikked".
+> This tool was originally named "canibekiked".
 
 > I'm not a native speaker, I had no idea what "kike" means in english before reading [this issue](https://github.com/parro-it/canibekikked/issues/2).
 
