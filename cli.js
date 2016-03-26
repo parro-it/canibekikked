@@ -34,9 +34,7 @@ function trademarkedLog(p) {
   const description = tr =>
     tr.description.toLowerCase().replace(/\n/g, '\n\t');
 
-  return '\n' +
-    `${logSymbols.error} Package ${chalk.cyan(p.name)} ` +
-    `has a trademarked name:\n` +
+  return `\n${logSymbols.error} ` +
     p.trademarks.map(t =>
       `${chalk.cyan(t.wordmark.trim())} is a trademark registered in ${t.reg.getFullYear()}\n` +
       `S/N:\t${t.sn}\n` +
