@@ -4,6 +4,28 @@ const ora = require('ora');
 const canibekiked = require('canibekiked-api').default;
 const spinner = ora('Retrieving packages');
 const logSymbols = require('log-symbols');
+const meow = require('meow');
+const updateNotifier = require('update-notifier');
+
+const cli = meow(`
+  Usage:
+    canibekiked [user]
+
+  * user - NPM username, defaults to currently logged.
+  * options:
+    -t/--token      Use your own API token
+    -v/--version    Print version
+    -h/--help       Print help
+`, {
+  alias: {
+    v: 'version',
+    h: 'help',
+    t: 'token'
+  },
+  string: ['_']
+});
+
+updateNotifier({pkg: cli.pkg}).notify();
 
 spinner.start();
 
@@ -23,7 +45,7 @@ function trademarkedLog(p) {
     `)}\n`;
 }
 
-canibekiked()
+canibekiked(cli.input[0])
   .then(results => {
     results.on('package-checking', name => {
       spinner.color = 'yellow';
