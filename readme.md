@@ -41,6 +41,15 @@ Check all repositories of a particulr user:
 $ canibekikked parroit
 ```
 
+# Your own API token
+
+Since the API has rate-limit, you can supply your own API token. Sign up to [markerapi](http://www.markerapi.com/) to get one for free.
+
+```bash
+# replace with your token
+$ canibekikked -t yZ32rW4Pq6
+```
+
 # Related projects
 
 * [is-trademarked](https://github.com/egoist/is-trademarked) - Check if a word is trademarked.
