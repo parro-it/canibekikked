@@ -35,7 +35,7 @@ Check all repositories of logged user on NPM:
 $ canibekikked
 ```
 
-Check all repositories of a particulr user:
+Check all repositories of a particular user:
 
 ```bash
 $ canibekikked parroit
